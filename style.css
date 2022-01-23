@@ -1,0 +1,201 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Variables globales */
+:root {
+    /*Variables de colores personalizados*/
+    --colorGrisFuerte: #3c4146;
+    --colorGrisClarito: #ccc;
+    --colorGrisIntermedio: #a8a8a8;
+    --colorMarronGris: #484848;
+    --colorNaranjaClaro: #ffbe50;
+    --colorNaranjaFogata: rgba(255, 146, 3, 0.8);
+    --colorAzulFuerte: rgb(13, 5, 90);
+    --colorAzulClarito: #37bcf9;
+    --colorAzulPetroleo: #00538c;
+    /*Variables de colores de Bootstrap*/
+    --colorDark: #212529;
+    /* --colorLight: #f8f9fa; */
+    --colorSuccess: #198754;
+    --colorinfo: #0dcaf0;
+    --colorWarning: #ffc107;
+    --colorDanger: #dc3545;
+    --colorPrimary: #0d6efd;
+    --colorSecondary: #6c757d;
+    /*colores a elegir para trabajar:*/
+    /*Variables de fuentes de letras*/
+    --fuenteUno: "Nunito", sans-serif;
+    --fuenteDos: "Open Sans", sans-serif;
+}
+
+/*Variables globales de trabajo*/
+:root{
+    --colorContainer: #212529;
+    --colortitulo: #6c757d;
+    --colorSubtitulo: rgba(255, 146, 3, 0.8);
+
+}
+
+body{
+    background-color: black;
+}
+
+.containerHeader{
+    min-height: 10rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 2px solid var(--colortitulo);
+}
+
+.containerSection{
+    min-height: 40rem;
+    background-color: var(--colorContainer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerFooter{
+    min-height: 8rem;
+    background-color: black;
+    border-top: 2px solid var(--colortitulo);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containerApp{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    text-align: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    background-color: black;
+    width: 90%;
+    min-height: 20rem;
+    border: 2px solid var(--colortitulo);
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px #ccc;
+}
+
+.containerMsg{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.containerSocialMedia{
+    display: flex;
+}
+
+.imgSocialMedia{
+    height: 3rem;
+    margin: 1.75rem;
+    border-radius: 50%;
+    border: 1px solid var(--colortitulo);
+    padding: 0.2rem;
+}
+
+.titulo{
+    font-size: 3.25rem;
+    color: var(--colortitulo);
+    font-family: var(--fuenteUno);
+}
+.subtitulo {
+    font-size: 2.25rem;
+    color: var(--colorSubtitulo);
+    font-family: var(--fuenteUno); 
+}
+
+.subtitulo span{
+    color: var(--colorPrimary);
+}
+
+h3{
+    padding-top: 3rem;
+    color: var(--colorSubtitulo);
+    font-size: 1.75rem;
+    font-family: var(--fuenteUno);
+    text-align: center;
+}
+
+h4{
+    color: var(--colortitulo);
+    margin: 0.25rem;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-family: var(--fuenteDos);
+}
+
+.containerFooter a{
+    text-decoration: none;
+}
+
+h5{
+    /* color: var(--colortitulo); */
+    color: var(--colorNaranjaFogata);
+    font-size: 1rem;
+    font-family: var(--fuenteDos);
+    margin: 0.25rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+
+}
+
+input{
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--colortitulo);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--fuenteDos);
+    width: 90%;
+}
+
+button{
+    margin: 0.7rem;
+    padding: 1rem;
+    border-radius:5px;
+    font-size: 1rem;
+    font-family: var(--fuenteDos);
+}
+
+textarea{
+    width: 90%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--colortitulo);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--fuenteDos);
+}
+
+#encriptar{
+    background-color: var(--colorPrimary);
+    border: 2px solid var(--colorAzulPetroleo);
+    color: white;
+}
+
+#desencriptar{
+    background-color: var(--colorSubtitulo);
+    border: 2px solid rgb(253, 103, 3);
+    color: white;
+}
+
+#copiar{
+    background-color: var(--colorDanger);
+    border: 2px solid rgb(253, 3, 24);
+    color: white;
+}
+
+

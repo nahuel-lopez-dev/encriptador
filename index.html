@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este es desencriptador es un reto del programa de Alura, Principiante en programación">
+    <!-- Imagen para el título de la pestaña -->
+    <link rel="icon" type="favicon/x-icon" href="#">
+    <!-- Enlaces a google font: letra "Nunito" -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- Enlaces a google font: letra "Opens Sans" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- Titulo de la pestaña-->
+    <title>Encriptador</title>
+    <!-- Enlace a CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="containerHeader">
+        <h1 class="titulo">Encriptador</h1>
+        <h2 class="subtitulo">Oracle + <span>alura LATAM</span></h2>
+    </header>
+
+    <section class="containerSection">
+        <h3>Código Secreto by Nahuel-DevOne</h3>
+        <div class="containerApp">
+            <h4>Solo letras minúsculas, sin acento</h4>
+            <input id="app" type="text" placeholder="Ingrese el texto aquí">
+            <div>
+                <button id="encriptar" type="button">Encriptar</button>
+                <button id="desencriptar" type="button">Desencriptar</button>
+                <!-- <button type="button">Copiar</button> -->
+            </div>
+            <div class="containerMsg">
+                <h4>Mensaje encriptado</h4>
+                <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button id="copiar" type="button">Copiar</button>
+        </div>
+    </section>
+
+    <footer class="containerFooter">
+        <a href="#app">
+            <h4>Encriptador</h4>
+        </a>
+        <div class="containerSocialMedia">
+            <a href="https://www.linkedin.com/in/nahuel-developer/" target="_blank">
+                <img class="imgSocialMedia" src="./img/linkedin.svg" alt="logo de Linkedin">
+            </a>
+            <a href="https://github.com/Nahuel-DevOne" target="_blank">
+                <img class="imgSocialMedia" src="./img/github.svg" alt="logo de GitHub">
+            </a>
+        </div>
+        <div>
+            <h5>Programa ONE</h5>
+            <h5>Nahuel-DevOne &copy; 2022</h5>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body> 
+</html>
