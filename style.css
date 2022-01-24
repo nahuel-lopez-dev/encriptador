@@ -168,6 +168,7 @@ button{
     border-radius:5px;
     font-size: 1rem;
     font-family: var(--fuenteDos);
+    cursor:pointer;
 }
 
 textarea{
@@ -181,15 +182,23 @@ textarea{
 }
 
 #encriptar{
-    background-color: var(--colorPrimary);
+    background-color: var(--colorAzulFuerte);
     border: 2px solid var(--colorAzulPetroleo);
     color: white;
+}
+
+#encriptar:hover{
+    background-color: var(--colorPrimary);
 }
 
 #desencriptar{
     background-color: var(--colorSubtitulo);
     border: 2px solid rgb(253, 103, 3);
     color: white;
+}
+
+#desencriptar:hover{
+    background-color: var(--colorNaranjaClaro);
 }
 
 #copiar{
