@@ -1,51 +1,7 @@
 /** Forma de organización **/
-//// /***** Entidades *****/ //no va a ser necesario
 /***** Variables y selectores *****/
 /***** Funciones *****/
 /***** Eventos *****/
-/***** Lógica *****/ 
-
-/** variables y selectores */
-const encriptar = document.querySelector("#encriptar");
-const desencriptar = document.querySelector("#desencriptar");
-const copiar = document.querySelector("#copiar");
-
-
-/** funciones */
-
-//funciona
-function encriptaTexto(){
-
-    const input = document.querySelector("#input");
-    let texto = input.value;
-    console.log(codificaLetras(texto));
-    colocaTextoEncriptado(texto);
-
-    // texto.textContent = '';
-
-}
-
-//no funciona. averiguar
-function desencriptaTexto(){
-
-    const input = document.querySelector("#input");
-    let texto = input.value;
-    console.log(descodificaLetras(texto));
-    colocaTextoDesencriptado(texto);
-
-    // alert("En el futuro voy a desencriptar texto");
-}
-
-function copiaTexto(){
-    alert("En el futuro voy a copiar texto");
-}
-
-/** eventos */
-encriptar.addEventListener("click", encriptaTexto);
-desencriptar.addEventListener("click", desencriptaTexto);
-copiar.addEventListener("click", copiaTexto);
-
-/** otras funciones que voy a utilizar */
 
 /** Condiciones para el encriptador ** 
  * llaves de encriptación:
@@ -64,6 +20,38 @@ copiar.addEventListener("click", copiaTexto);
  * Ej: "gato" --> "gaitober"
  */
 
+/** variables y selectores */
+const encriptar = document.querySelector("#encriptar");
+const desencriptar = document.querySelector("#desencriptar");
+const copiar = document.querySelector("#copiar");
+
+/** funciones */
+
+//función para encriptar el texto
+//Tiene dentro otras funciones para separar responsabilidades
+function encriptaTexto(){
+
+    const input = document.querySelector("#input");
+    let texto = input.value;
+    colocaTextoEncriptado(texto);
+    console.log(codificaLetras(texto));
+    
+}
+//función para desencriptar el texto
+//Tiene dentro otras funciones para separar responsabilidades
+function desencriptaTexto(){
+
+    const input = document.querySelector("#input");
+    let texto = input.value;
+    colocaTextoDesencriptado(texto);
+    console.log(descodificaLetras(texto));
+
+}
+//función para copiar el texto del textarea
+function copiaTexto(){
+    alert("En el futuro voy a copiar texto");
+}
+//función para codificar el texto del input según las llaves de encriptación
 function codificaLetras(texto){
     
     texto = texto.split('');
@@ -91,46 +79,41 @@ function codificaLetras(texto){
     }
 
     return texto.join('');
-
 }
-
-
+//función para descodificar el texto del input según las llaves de encriptación
 function descodificaLetras(texto){
-    
-    texto = texto.split('');
 
-    for(let i = 0 ; i < texto.length ; ++i){
-        
-        switch(texto[i]){
-            
-            case 'ai':
-                texto[i] = "a";
-                break;
-            case 'enter':
-                texto[i] = "e";
-                break;
-            case 'imes':
-                texto[i] = "i";
-                break;
-            case 'ober':
-                texto[i] = "o";
-                break;
-            case 'ufat':
-                texto[i] = "u";
-                break;
-        }
-    }
+    let textoDescodificado = texto.replace(/ai/g, "a").replace(/enter/g, "e").replace(/imes/g, "i").replace(/ober/g, "o").replace(/ufat/g,"u" );
 
-    return texto.join('');
-
+    return textoDescodificado;    
 }
-
+//función para colocar el texto encriptado en el textarea
 function colocaTextoEncriptado(texto){
     cuaderno = document.querySelector("#cuaderno");
     cuaderno.textContent = codificaLetras(texto);
 }
-
-function colocaTextoDesencriptado(texto){
+//función para colocar el texto desencriptado en el textarea
+function colocaTextoDesencriptado(textoDescodificado){
     cuaderno = document.querySelector("#cuaderno");
-    cuaderno.textContent = descodificaLetras(texto);
+    cuaderno.textContent = descodificaLetras(textoDescodificado);
 }
+
+
+//función para borrar los datos ingresados en el input
+
+// function limpiarInput(){
+    
+// }
+
+
+
+/***** eventos *****/
+
+//evento generado por el botón encriptar, para encriptar el texto del input
+encriptar.addEventListener("click", encriptaTexto);
+//evento generado por el botón desencriptar, para desencriptar el texto del input
+desencriptar.addEventListener("click", desencriptaTexto);
+//evento generado por el botón copiar, para copiar el texto del textarea
+copiar.addEventListener("click", copiaTexto);
+
+
