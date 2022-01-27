@@ -21,6 +21,7 @@
  */
 
 /** variables y selectores */
+const input = document.querySelector("#input");
 const encriptar = document.querySelector("#encriptar");
 const desencriptar = document.querySelector("#desencriptar");
 const copiar = document.querySelector("#copiar");
@@ -31,25 +32,29 @@ const copiar = document.querySelector("#copiar");
 //Tiene dentro otras funciones para separar responsabilidades
 function encriptaTexto(){
 
-    const input = document.querySelector("#input");
     let texto = input.value;
-    colocaTextoEncriptado(texto);
     console.log(codificaLetras(texto));
-    
+    colocaTextoEncriptado(texto);
+    limpiarInput();
 }
 //función para desencriptar el texto
 //Tiene dentro otras funciones para separar responsabilidades
 function desencriptaTexto(){
 
-    const input = document.querySelector("#input");
     let texto = input.value;
-    colocaTextoDesencriptado(texto);
     console.log(descodificaLetras(texto));
-
+    colocaTextoDesencriptado(texto);
+    limpiarInput();
 }
 //función para copiar el texto del textarea
 function copiaTexto(){
-    alert("En el futuro voy a copiar texto");
+    // alert("En el futuro voy a copiar texto");
+    const copiado = document.querySelector("#cuaderno");
+    copiado.select();
+    copiado.setSelectionRange(0,99999);
+    //método deprecado. Tratar de no usar
+    // document.execCommand('copy');
+    navigator.clipboard.writeText(copiado.value);   //método más nuevo
 }
 //función para codificar el texto del input según las llaves de encriptación
 function codificaLetras(texto){
@@ -97,15 +102,11 @@ function colocaTextoDesencriptado(textoDescodificado){
     cuaderno = document.querySelector("#cuaderno");
     cuaderno.textContent = descodificaLetras(textoDescodificado);
 }
-
-
 //función para borrar los datos ingresados en el input
-
-// function limpiarInput(){
+function limpiarInput(){
     
-// }
-
-
+    return input.value = "";    
+}
 
 /***** eventos *****/
 

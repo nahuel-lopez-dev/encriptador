@@ -133,9 +133,13 @@ h4{
     color: var(--colortitulo);
     margin: 0.25rem;
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     font-family: var(--fuenteDos);
 }
+
+/* .containerApp > h4{
+    color: var(--colorDanger);
+} */
 
 .containerFooter a{
     text-decoration: none;
@@ -205,6 +209,10 @@ textarea{
     background-color: var(--colorDanger);
     border: 2px solid rgb(253, 3, 24);
     color: white;
+}
+
+#copiar:hover{
+    background-color: lightcoral;
 }
 
 
