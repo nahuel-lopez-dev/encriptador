@@ -28,12 +28,22 @@ const copiar = document.querySelector("#copiar");
 
 /***** funciones *****/
 
-function validar(){
-    // \\\\\\\\\\\\\
+//ver luego para mejorar el código. como colocar una única validación dentro de encriptarTexto y desencriptarTexto
+//función para validar el texto encriptado
+function validaTextoParaEncriptar(){
+    
     const pattern = new RegExp('^[a-z ]+$');
 
     if(pattern.test(input.value)){
         encriptaTexto();
+    }
+}
+//función para validar el texto desencriptado
+function validaTextoParaDesencriptar(){
+    const pattern = new RegExp('^[a-z ]+$');
+
+    if(pattern.test(input.value)){
+        desencriptaTexto();
     }
 }
 
@@ -119,9 +129,9 @@ function limpiarInput(){
 /***** eventos *****/
 
 //evento generado por el botón encriptar, para encriptar el texto del input
-encriptar.addEventListener("click", validar);
+encriptar.addEventListener("click", validaTextoParaEncriptar);
 //evento generado por el botón desencriptar, para desencriptar el texto del input
-desencriptar.addEventListener("click", desencriptaTexto);
+desencriptar.addEventListener("click", validaTextoParaDesencriptar);
 //evento generado por el botón copiar, para copiar el texto del textarea
 copiar.addEventListener("click", copiaTexto);
 
