@@ -27,6 +27,16 @@ const desencriptar = document.querySelector("#desencriptar");
 const copiar = document.querySelector("#copiar");
 
 /***** funciones *****/
+
+function validar(){
+    // \\\\\\\\\\\\\
+    const pattern = new RegExp('^[a-z ]+$');
+
+    if(pattern.test(input.value)){
+        encriptaTexto();
+    }
+}
+
 //función para encriptar el texto
 //Tiene dentro otras funciones para separar responsabilidades
 function encriptaTexto(){
@@ -109,7 +119,7 @@ function limpiarInput(){
 /***** eventos *****/
 
 //evento generado por el botón encriptar, para encriptar el texto del input
-encriptar.addEventListener("click", encriptaTexto);
+encriptar.addEventListener("click", validar);
 //evento generado por el botón desencriptar, para desencriptar el texto del input
 desencriptar.addEventListener("click", desencriptaTexto);
 //evento generado por el botón copiar, para copiar el texto del textarea
