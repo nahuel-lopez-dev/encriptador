@@ -20,14 +20,13 @@
  * Ej: "gato" --> "gaitober"
  */
 
-/** variables y selectores */
+/***** variables y selectores *****/
 const input = document.querySelector("#input");
 const encriptar = document.querySelector("#encriptar");
 const desencriptar = document.querySelector("#desencriptar");
 const copiar = document.querySelector("#copiar");
 
-/** funciones */
-
+/***** funciones *****/
 //función para encriptar el texto
 //Tiene dentro otras funciones para separar responsabilidades
 function encriptaTexto(){
@@ -48,7 +47,6 @@ function desencriptaTexto(){
 }
 //función para copiar el texto del textarea
 function copiaTexto(){
-    // alert("En el futuro voy a copiar texto");
     const copiado = document.querySelector("#cuaderno");
     copiado.select();
     copiado.setSelectionRange(0,99999);
