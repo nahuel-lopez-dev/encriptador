@@ -12,7 +12,7 @@ Consiste en un encriptador de texto hecho con HTML5, CSS y JavaScript. No usé n
 
 ## *Version 1.0.0:*
 
-- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)](https://nahuel-devone.github.io/encriptador/)
+- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=github&logoColor=fff&color=23272d)](https://nahuel-devone.github.io/encriptador/)
 
 ## *Desarrollado con:*
 
